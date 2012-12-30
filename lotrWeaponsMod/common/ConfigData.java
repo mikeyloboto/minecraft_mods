@@ -32,6 +32,7 @@ public class ConfigData {
 	//other
 	
 	public static int CHUNKS_PER_CLOUD;
+	public static int PHIAL_WORKING_ZONE;
 	
 	static Configuration conf;
 	public static void loadConf(FMLPreInitializationEvent event){
@@ -50,6 +51,8 @@ public class ConfigData {
 	private static void loadExtraConf() {
 		
 		CHUNKS_PER_CLOUD = conf.get(Configuration.CATEGORY_GENERAL, "ChunksPerCloud", 100).getInt();
+		PHIAL_WORKING_ZONE = conf.get(Configuration.CATEGORY_GENERAL,  "GlowingPhialWorkingZone", 8).getInt();
+		
 	}
 	public static void loadBlocksConf(){
 

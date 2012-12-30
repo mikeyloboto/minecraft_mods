@@ -37,7 +37,7 @@ public class GlowingPhial extends Item {
 
             if (par5)
             {
-            	
+            	int zon = ConfigData.PHIAL_WORKING_ZONE;
                 int plX = (int)par3Entity.posX;
                 int plY = (int)par3Entity.posY-1;
                 int plZ = (int)par3Entity.posZ;
@@ -46,12 +46,12 @@ public class GlowingPhial extends Item {
                 if (par2World.getBlockId(plX,  plY,  plZ) == 0){
                 	//par2World.setBlockWithNotify(plX, plY, plZ, lotrWeapons.LightBlock.blockID);
                 	//EnumSkyBlock par1EnumSkyBlock = null;
-                	for (int i = plX-8; i<=(plX+8); i++){
-                		for (int j = plY-8; j <=plY+8; j++){
-                			for (int k = plZ-8; k<=plZ+8; k++){
+                	for (int i = plX-zon; i<=(plX+zon); i++){
+                		for (int j = plY-zon; j <=plY+zon; j++){
+                			for (int k = plZ-zon; k<=plZ+zon; k++){
                 				if (par2World.getBlockId(i,  j,  k) == lotrWeapons.LightBlock.blockID){
                 					par2World.setBlock(i, j, k, 0);
-                					System.out.println("Removed");
+                					//System.out.println("Removed");
                 				}
                 			}
                 		}
