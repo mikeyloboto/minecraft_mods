@@ -37,30 +37,12 @@ public class GlowingPhial extends Item {
 
             if (par5)
             {
-            	int zon = ConfigData.PHIAL_WORKING_ZONE;
                 int plX = (int)par3Entity.posX;
-                int plY = (int)par3Entity.posY-1;
+                int plY = (int)par3Entity.posY;
                 int plZ = (int)par3Entity.posZ;
-                Random rand = new Random();
-                int chance = rand.nextInt(20);
-                if (par2World.getBlockId(plX,  plY,  plZ) == 0){
-                	//par2World.setBlockWithNotify(plX, plY, plZ, lotrWeapons.LightBlock.blockID);
-                	//EnumSkyBlock par1EnumSkyBlock = null;
-                	for (int i = plX-zon; i<=(plX+zon); i++){
-                		for (int j = plY-zon; j <=plY+zon; j++){
-                			for (int k = plZ-zon; k<=plZ+zon; k++){
-                				if (par2World.getBlockId(i,  j,  k) == lotrWeapons.LightBlock.blockID){
-                					par2World.setBlock(i, j, k, 0);
-                					//System.out.println("Removed");
-                				}
-                			}
-                		}
-                	}
-                	par2World.setBlockAndMetadataWithUpdate(plX,  plY,  plZ,  lotrWeapons.LightBlock.blockID,  0,  true);
-                	//System.out.println("fail");
-                }
+                PhialGlowEffect.glowPlace(plX, plY, plZ, par2World);
                 
-               
+                
             }
         
 	}
