@@ -78,16 +78,7 @@ public class ConfigData {
 		SWORD_GLAMDRING = conf.getItem("SwordGlamdring",  15389).getInt();
 		SWORD_NARSIL = conf.getItem("SwordNarsil",  15390).getInt();
 		MITHRIL_CHESTPLATE = conf.getItem("MithrilChestplate", 15391).getInt();
-		
-		//ElvenAlloy = new ElvenAlloy(15380);
-		//ElvenAlloyIngot = new ElvenAlloyIngot(15381);
-		//AerialFuel = new AerialFuel(15382);
-		//LightCrystalShard = new LightCrystalShard(15383);
-		//CondensedLightChunk = new CondensedLightChunk(15384);
-		//CondensedCrystal = new CondensedCrystal(15385);
-		//CondensedLightBottle = new CondensedLightBottle(15386);
-		//GlowingPhial = new GlowingPhial(15387);
-		//SwordSting = new SwordSting(15388);
+
 	}
 	
 	

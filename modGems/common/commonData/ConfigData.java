@@ -94,20 +94,7 @@ public class ConfigData {
 		AMETRINE_DUST = conf.getItem("AmetrineDust",  15358).getInt();
 		COMPRESSED_SAPPHIRE = conf.getItem("CompressedSapphire",  15359).getInt();
 		SARDONYX_GEM = conf.getItem("SardonyxGem",  15360).getInt();
-		//AmetrineGem = new AmetrineGem(15347);
-		//RedBerylGem = new RedBerylGem(15348);
-		//AquamarineGem = new AquamarineGem(15349);
-		//HeliodorGem = new HeliodorGem(15350);
-		//SapphireGem = new SapphireGem(15351);
-		//OnyxGem = new OnyxGem(15352);
-		//AmberGem = new AmberGem(15353);
-		//CitrineGem = new CitrineGem(15354);
-		//AmethystGem = new AmethystGem(15355);
-		//AmethystDust = new AmethystDust(15356);
-		//CitrineDust = new CitrineDust(15357);
-		//AmetrineDust = new AmetrineDust(15358);
-		//CompressedSapphire = new CompressedSapphire(15359);
-		//Sardonyx = new Sardonyx(15360);
+
 	}
 	
 	

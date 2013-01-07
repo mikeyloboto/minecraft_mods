@@ -8,12 +8,15 @@ import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.SidedProxy;
@@ -54,6 +57,9 @@ public class pumpkinModsBase
 		LanguageRegistry.addName(gface, "gizr_padukovich");		
 		LanguageRegistry.addName(rface, "chickenleche");	
 		proxy.registerRenderers();
+		 //EntityRegistry.registerModEntity(PumpkinHead.class, "Mikey_Loboto", 1, this, 80, 3, true);
+		 //EntityRegistry.addSpawn(PumpkinHead.class, 10, 2, 4, EnumCreatureType.monster, BiomeGenBase.beach, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.jungle, BiomeGenBase.jungleHills, BiomeGenBase.mushroomIsland, BiomeGenBase.mushroomIslandShore, BiomeGenBase.ocean, BiomeGenBase.plains, BiomeGenBase.river, BiomeGenBase.swampland);
+		 //LanguageRegistry.instance().addStringLocalization("entity.Tutorial_Tutorialmod.Tutorial.name", "Tutorial");
+		 }
 	}
 	
-}

@@ -3,15 +3,19 @@ package modGems.common;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Block;
 import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PostInit;
 import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import modGems.common.commonData.CommonProxy;
 import modGems.common.commonData.ConfigData;
+import modGems.common.commonData.GemBoxRender;
+import modGems.common.entity.GemBoxTileEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.block.material.Material;
@@ -54,13 +58,15 @@ public class CollectibleGems {
 	public static Item CompressedSapphire;
 	public static Item Sardonyx;
 	
-	
+	@Instance("CollectibleGems")
+    public static CollectibleGems instance;
 	
 	
 	
 	
 	@SidedProxy(clientSide="modGems.common.commonData.ClientProxy", serverSide="modGems.common.commonData.CommonProxy")
 	public static CommonProxy proxy;
+	public static int renderId;
 
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event){
@@ -200,7 +206,9 @@ public class CollectibleGems {
 		MinecraftForge.setBlockHarvestLevel(CitrineBlock, "pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(AmberBlock, "pickaxe", 2);
 		
-		
+		GemBoxRender tileent1 = new GemBoxRender();	
+		instance = this;
+		GameRegistry.registerTileEntity(GemBoxTileEntity.class, "GemBoxEntity");
 		proxy.registerRenderers();
 	}
 }

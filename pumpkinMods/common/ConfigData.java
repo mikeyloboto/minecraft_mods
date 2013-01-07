@@ -10,6 +10,9 @@ public class ConfigData {
 public static int MFACE;
 public static int GFACE;
 public static int RFACE;
+public static boolean OPTION_1;
+public static boolean OPTION_2;
+
 	
 	static Configuration conf;
 	public static void loadConf(FMLPreInitializationEvent event){
@@ -26,6 +29,9 @@ public static int RFACE;
 		
 	}
 	private static void loadExtraConf() {
+		OPTION_1 = conf.get(Configuration.CATEGORY_GENERAL, "Option1", false).getBoolean(false);
+		OPTION_2 = conf.get(Configuration.CATEGORY_GENERAL, "Option2", false).getBoolean(false);
+		
 		
 	}
 	public static void loadBlocksConf(){

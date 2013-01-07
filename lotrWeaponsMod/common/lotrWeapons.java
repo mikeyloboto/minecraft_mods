@@ -61,7 +61,7 @@ public class LotrWeapons
 	static EnumToolMaterial enumToolMaterialElvenAlloy = EnumHelper.addToolMaterial("elvenAlloy", 3, 35704, 15F, 19, 25);
 	
 	
-	@Instance("lotrWeapons")
+	@Instance("LotrWeapons")
     public static LotrWeapons instance;
 
 	@SidedProxy(clientSide="lotrWeaponsMod.common.commonData.ClientProxy", serverSide="lotrWeaponsMod.common.commonData.CommonProxy")
@@ -134,8 +134,8 @@ public class LotrWeapons
 	GameRegistry.addRecipe(new ItemStack(SwordSting), "x", "x", "y", 'x', new ItemStack(ElvenAlloyIngot), 'y', new ItemStack(GlowingPhial));
 	GameRegistry.addRecipe(new ItemStack(SwordGlamdring), " x ", " x ", "zyz", 'x', new ItemStack(ElvenAlloyIngot), 'y', new ItemStack(net.minecraft.item.Item.diamond), 'z', new ItemStack(modGems.common.CollectibleGems.AmetrineGem));
 	instance = this;
-	  GameRegistry.registerTileEntity(TileEntityDwarfFurnace.class, "dwarfFurnace");
-	    NetworkRegistry.instance().registerGuiHandler(this, new GuiHandler());
+	GameRegistry.registerTileEntity(TileEntityDwarfFurnace.class, "dwarfFurnace");
+	NetworkRegistry.instance().registerGuiHandler(this, new GuiHandler());
 		
 	proxy.registerRenderers();
 	}
