@@ -51,7 +51,7 @@ protected boolean canSilkHarvest()
 
 public int idDropped(int par1, Random random, int par2) {
 	Random par3 = new Random();
-	int choice = random.nextInt(16);
+	int choice = random.nextInt(4);
 	int fin = 0;
 	if(choice==0){
 		fin = LotrWeapons.AerialFuel.shiftedIndex;
