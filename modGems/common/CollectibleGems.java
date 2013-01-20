@@ -75,7 +75,7 @@ public class CollectibleGems {
 	}
 	@Init
 	public void load(FMLInitializationEvent event){
-	
+		
 		AmetrineOre = new modGems.common.ores.AmetrineOre(ConfigData.AMETRINE_ORE, 0).setHardness(3F).setResistance(3F).setBlockName("ametrine_ore");
 		GameRegistry.registerBlock(AmetrineOre);
 		LanguageRegistry.addName(AmetrineOre,  "Ametrine Ore");

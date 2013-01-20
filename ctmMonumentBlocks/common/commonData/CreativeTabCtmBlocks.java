@@ -24,6 +24,6 @@ public String getTabLabel()
 @Override
 public ItemStack getIconItemStack() {
 
-    return new ItemStack(CtmMonumentBlocks.WhiteBlock);
+    return new ItemStack(CtmMonumentBlocks.CtmBlock);
 }
 }

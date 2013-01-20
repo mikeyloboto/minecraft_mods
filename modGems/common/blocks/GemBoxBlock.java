@@ -15,7 +15,7 @@ import modGems.common.entity.GemBoxTileEntity;
 public class GemBoxBlock extends BlockContainer {
 
 	public GemBoxBlock(int par1, int par2) {
-		super(par1, par2, Material.glass);		
+		super(par1, par2, Material.iron);		
 		setCreativeTab(pumpkinMods.common.pumpkinModsBase.pumpkinTabBlocks);
 	}
 	@Override
