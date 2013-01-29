@@ -2,6 +2,6 @@ package modGems.common.entity;
 
 import net.minecraft.tileentity.TileEntity;
 
-public class GemBoxTileEntity extends TileEntity{
+public class GemBoxTileEntity extends TileEntity {
 
 }

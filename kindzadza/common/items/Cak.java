@@ -7,7 +7,7 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.IArmorTextureProvider;
 
-public class Cak extends ItemArmor implements IArmorTextureProvider{
+public class Cak extends ItemArmor implements IArmorTextureProvider {
 
 	public Cak(int par1, int par2, int par3) {
 		super(par1, KinDzaDza.enumArmorMaterialCak, par2, par3);
@@ -20,11 +20,11 @@ public class Cak extends ItemArmor implements IArmorTextureProvider{
 	public String getArmorTextureFile(ItemStack itemstack) {
 		return ClientProxy.CAK_PNG;
 	}
+
 	@Override
-	public String getTextureFile()
-	{
+	public String getTextureFile() {
 		return ClientProxy.ITEMS_PNG;
-		
+
 	}
 
 }

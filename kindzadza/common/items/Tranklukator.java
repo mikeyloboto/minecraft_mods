@@ -1,6 +1,10 @@
 package kindzadza.common.items;
 
+import java.util.List;
+
+import kindzadza.common.KinDzaDza;
 import kindzadza.common.commonData.ClientProxy;
+import kindzadza.common.commonData.ConfigData;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -28,6 +32,13 @@ public class Tranklukator extends ItemBow {
 	}
 
 	@Override
+	public void addInformation(ItemStack par1Stack, EntityPlayer par2Player,
+			List par3List, boolean par4Bool) {
+		int ammo = 50 - par1Stack.getItemDamage();
+		par3List.add("Charges Left: " + ammo);
+	}
+
+	@Override
 	public boolean isFull3D() {
 		return true;
 	}
@@ -36,7 +47,7 @@ public class Tranklukator extends ItemBow {
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World,
 			EntityPlayer par3EntityPlayer) {
 		int meta = par1ItemStack.getItemDamage();
-		if ((meta < 50)||(par3EntityPlayer.capabilities.isCreativeMode)) {
+		if ((meta < 50) || (par3EntityPlayer.capabilities.isCreativeMode)) {
 			ArrowNockEvent event = new ArrowNockEvent(par3EntityPlayer,
 					par1ItemStack);
 			MinecraftForge.EVENT_BUS.post(event);
@@ -51,6 +62,12 @@ public class Tranklukator extends ItemBow {
 				par2World.spawnEntityInWorld(var8);
 			}
 			par1ItemStack.damageItem(1, par3EntityPlayer);
+		} else {
+			if (par3EntityPlayer.inventory.hasItem(KinDzaDza.Luc.shiftedIndex)) {
+				par3EntityPlayer.inventory
+						.consumeInventoryItem(KinDzaDza.Luc.shiftedIndex);
+				par1ItemStack.setItemDamage(0);
+			}
 		}
 		return par1ItemStack;
 	}

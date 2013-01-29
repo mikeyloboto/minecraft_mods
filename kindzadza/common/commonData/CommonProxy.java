@@ -5,11 +5,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class CommonProxy {
-		
 
-	public void registerRenderers () {
-		
+	public void registerRenderers() {
+
 	}
-	
 
 }

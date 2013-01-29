@@ -14,37 +14,37 @@ public class CondensedLightCrystal extends Block {
 	public CondensedLightCrystal(int par1) {
 		super(par1, Material.glass);
 
-
-	this.setStepSound(Block.soundGlassFootstep);
-	this.setCreativeTab(pumpkinMods.common.pumpkinModsBase.pumpkinTabBlocks);
-	this.setLightOpacity(0);
-	this.setLightValue(1.0F);
+		this.setStepSound(Block.soundGlassFootstep);
+		this.setCreativeTab(pumpkinMods.common.pumpkinModsBase.pumpkinTabBlocks);
+		this.setLightOpacity(0);
+		this.setLightValue(1.0F);
 	}
-@Override
-	public int getBlockTextureFromSide(int inp){
-		return 4;
-		}
+
 	@Override
-public int idDropped(int par1, Random random, int par2) {
-	return LotrWeapons.LightCrystalShard.shiftedIndex;
+	public int getBlockTextureFromSide(int inp) {
+		return 4;
 	}
-@Override
-public String getTextureFile () {
-	return ClientProxy.LOTRBLOCKS_PNG;
-	
-}
-public boolean isOpaqueCube()
-{
-        return false;
-}
 
-public int getRenderBlockPass()
-{
-        return 1;
-}
+	@Override
+	public int idDropped(int par1, Random random, int par2) {
+		return LotrWeapons.LightCrystalShard.shiftedIndex;
+	}
 
-public boolean renderAsNormalBlock()
-{
-        return false;
-}
+	@Override
+	public String getTextureFile() {
+		return ClientProxy.LOTRBLOCKS_PNG;
+
+	}
+
+	public boolean isOpaqueCube() {
+		return false;
+	}
+
+	public int getRenderBlockPass() {
+		return 1;
+	}
+
+	public boolean renderAsNormalBlock() {
+		return false;
+	}
 }

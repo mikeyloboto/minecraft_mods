@@ -13,16 +13,18 @@ public class SwordNarsil extends ItemSword {
 		setMaxStackSize(1);
 		setCreativeTab(pumpkinMods.common.pumpkinModsBase.pumpkinTabTools);
 	}
-	
+
 	@Override
-	public boolean isFull3D(){
+	public boolean isFull3D() {
 		return true;
 	}
-	public String getTextureFile(){
-	return ClientProxy.LOTRTOOLS_PNG;
+
+	public String getTextureFile() {
+		return ClientProxy.LOTRTOOLS_PNG;
 	}
+
 	@Override
-	public boolean isRepairable(){
+	public boolean isRepairable() {
 		return false;
 	}
 }

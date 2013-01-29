@@ -15,35 +15,30 @@ import modGems.common.entity.GemBoxTileEntity;
 public class GemBoxBlock extends BlockContainer {
 
 	public GemBoxBlock(int par1, int par2) {
-		super(par1, par2, Material.iron);		
+		super(par1, par2, Material.iron);
 		setCreativeTab(pumpkinMods.common.pumpkinModsBase.pumpkinTabBlocks);
 	}
-	@Override
-	public TileEntity createNewTileEntity(World par1World)
-    {
-        return new GemBoxTileEntity();
-    }
-	
-	@Override
-    public int getRenderBlockPass()
-    {
-        return 1;
-    }
-	
-    public int getRenderType()
-    {
-        return CollectibleGems.renderId;
-    }
-   
-    public boolean isOpaqueCube()
-    {
-        return false;
-    }
-   
-    public boolean renderAsNormalBlock()
-    {
-        return false;
-    }
- 
-}
 
+	@Override
+	public TileEntity createNewTileEntity(World par1World) {
+		return new GemBoxTileEntity();
+	}
+
+	@Override
+	public int getRenderBlockPass() {
+		return 1;
+	}
+
+	public int getRenderType() {
+		return CollectibleGems.renderId;
+	}
+
+	public boolean isOpaqueCube() {
+		return false;
+	}
+
+	public boolean renderAsNormalBlock() {
+		return false;
+	}
+
+}

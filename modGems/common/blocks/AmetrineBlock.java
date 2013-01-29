@@ -14,14 +14,15 @@ public class AmetrineBlock extends Block {
 		this.setStepSound(Block.soundStoneFootstep);
 		this.setCreativeTab(pumpkinMods.common.pumpkinModsBase.pumpkinTabBlocks);
 	}
-@Override
-	public int getBlockTextureFromSide(int inp){
+
+	@Override
+	public int getBlockTextureFromSide(int inp) {
 		return 12;
-		}
-	
-@Override
-public String getTextureFile () {
-	return ClientProxy.BLOCK_PNG;
-	
-}
+	}
+
+	@Override
+	public String getTextureFile() {
+		return ClientProxy.BLOCK_PNG;
+
+	}
 }

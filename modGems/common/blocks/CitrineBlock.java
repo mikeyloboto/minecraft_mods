@@ -11,17 +11,18 @@ public class CitrineBlock extends Block {
 		super(par1, par2, par3Material);
 		// TODO Auto-generated constructor stub
 
-	setStepSound(Block.soundStoneFootstep);
-	setCreativeTab(pumpkinMods.common.pumpkinModsBase.pumpkinTabBlocks);
+		setStepSound(Block.soundStoneFootstep);
+		setCreativeTab(pumpkinMods.common.pumpkinModsBase.pumpkinTabBlocks);
 	}
-@Override
-	public int getBlockTextureFromSide(int inp){
+
+	@Override
+	public int getBlockTextureFromSide(int inp) {
 		return 11;
-		}
-	
-@Override
-public String getTextureFile () {
-	return ClientProxy.BLOCK_PNG;
-	
-}
+	}
+
+	@Override
+	public String getTextureFile() {
+		return ClientProxy.BLOCK_PNG;
+
+	}
 }

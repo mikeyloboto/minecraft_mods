@@ -8,13 +8,12 @@ public class rface extends Item {
 
 	public rface(int par1) {
 		super(par1);
-    	maxStackSize = 8;
-    	setIconIndex(2);
-    	setItemName("rface");
-}
+		maxStackSize = 8;
+		setIconIndex(2);
+		setItemName("rface");
+	}
 
-public String getTextureFile() {
-	return ClientProxy.PUMPTAB_PNG;
+	public String getTextureFile() {
+		return ClientProxy.PUMPTAB_PNG;
+	}
 }
-}
-

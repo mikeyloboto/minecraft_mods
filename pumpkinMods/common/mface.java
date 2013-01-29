@@ -8,13 +8,12 @@ public class mface extends Item {
 
 	public mface(int par1) {
 		super(par1);
-    	maxStackSize = 8;
-    	setIconIndex(0);
-    	setItemName("mface");
-}
+		maxStackSize = 8;
+		setIconIndex(0);
+		setItemName("mface");
+	}
 
-public String getTextureFile() {
-	return ClientProxy.PUMPTAB_PNG;
+	public String getTextureFile() {
+		return ClientProxy.PUMPTAB_PNG;
+	}
 }
-}
-

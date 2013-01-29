@@ -11,17 +11,18 @@ public class BlockOnyxBlock extends Block {
 		super(par1, par2, par3Material);
 		// TODO Auto-generated constructor stub
 
-	setStepSound(Block.soundStoneFootstep);
-	setCreativeTab(pumpkinMods.common.pumpkinModsBase.pumpkinTabBlocks);
+		setStepSound(Block.soundStoneFootstep);
+		setCreativeTab(pumpkinMods.common.pumpkinModsBase.pumpkinTabBlocks);
 	}
-@Override
-	public int getBlockTextureFromSide(int inp){
+
+	@Override
+	public int getBlockTextureFromSide(int inp) {
 		return 14;
-		}
-	
-@Override
-public String getTextureFile () {
-	return ClientProxy.BLOCK_PNG;
-	
-}
+	}
+
+	@Override
+	public String getTextureFile() {
+		return ClientProxy.BLOCK_PNG;
+
+	}
 }
